@@ -7,7 +7,7 @@ def lambda_handler(event, context):
      # slack送信Sample
      requests.post(post_url, data = json.dumps({
             'text': 'event{}\n\n\ncontext{}'.format(event, context), # 投稿するテキスト
-            'username': 'github', # 投稿のユーザー名
+            'username': 'github_to_slack', # 投稿のユーザー名
             'link_names': 1, # メンションを有効にする
             'channel': 'github_to_slack', # チャンネル
             'icon_emoji': 'icon', # アイコン
